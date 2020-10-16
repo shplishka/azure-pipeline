@@ -27,6 +27,9 @@ steps:
 - script: git checkout main
   displayName: 'Get Latest Branch'
 
+- script: pwd
+  displayName: 'get path'
+
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
