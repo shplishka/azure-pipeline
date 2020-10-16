@@ -28,6 +28,7 @@ steps:
   displayName: 'Get Latest Branch'
 
 - script: pwd
+          ls
   displayName: 'get path'
 
 - task: PythonScript@0
