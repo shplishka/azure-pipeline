@@ -18,7 +18,6 @@ steps:
 - script: |
     pip install pytest requests setuptools wheel
     pip install -U databricks-cli
-    dbfs ls
   displayName: 'Load Python Dependencies'
 
 - checkout: self
