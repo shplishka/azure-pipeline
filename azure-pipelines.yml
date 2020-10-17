@@ -21,7 +21,7 @@ steps:
   displayName: 'Load Python Dependencies'
 
 - script: 
-    databricks configure --token <<<<EOF
+    databricks configure --token <<EOF
     https://$(databricks_location).azuredatabricks.net
     $(databricks-token)
     EOF
