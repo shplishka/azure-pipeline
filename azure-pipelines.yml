@@ -45,7 +45,7 @@ steps:
 - script: git clone https://github.com/shplishka/azure-pipeline.git
   displayName: 'clone'
   
-- script: ls
+- script: pwd
   displayName: 'get path'
 
 - task: PythonScript@0
