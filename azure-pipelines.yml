@@ -51,6 +51,6 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
-    scriptPath: '$(agent.builddirectory)/executenotebook.py'
+    scriptPath: '$(agent.builddirectory)/executenotebooks.py'
     arguments: '--shard $(DATABRICKS_HOST) --token $(DATABRICKS_TOKEN) --cluster $(EXISTING_CLUSTER_ID) --localpath $(Build.Repository.LocalPath)/notebooks/Users/Alhambra-54@greendreamteam.onmicrosoft.com/deploy --workspacepath /Demo/Test --outfilepath /home/vsts/work/1/s/notebooks/Users/Alhambra-54@greendreamteam.onmicrosoft.com --params model_name=$(model_name)'
   displayName: 'Deploy MLflow Model from Registry to Azure ML for Testing'
