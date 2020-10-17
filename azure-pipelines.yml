@@ -21,7 +21,7 @@ steps:
   displayName: 'Load Python Dependencies'
 
 - script: 
-    databricks configure --token dapi7a3667db53c6b6e2d947a54228ca01a2 
+    databricks configure --token 'dapi7a3667db53c6b6e2d947a54228ca01a2'
   displayName: 'Configure DataBrick'
   
 - checkout: self
