@@ -44,13 +44,8 @@ steps:
 - script: pwd
           ls
   displayName: 'get path'
-- task: DownloadGitHubRelease@0
-  inputs:
-    connection: 'GitHub connection 1'
-    userRepository: 'shplishka/azure-pipeline'
-    defaultVersionType: 'latest'
-    itemPattern: '*notebook*'
-    downloadPath: '$(agent.builddirectory)'
+- script: git clone https://github.com/shplishka/azure-pipeline.git
+ 
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
