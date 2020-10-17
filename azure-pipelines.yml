@@ -20,14 +20,9 @@ steps:
     pip install -U databricks-cli
   displayName: 'Load Python Dependencies'
 
-- script: |
-    echo "y
-    $(WORKSPACE-REGION-URL)
-    $(CSE-DEVELOP-PAT)
-    $(EXISTING-CLUSTER-ID)
-    $(WORKSPACE-ORG-ID)
-    15001" | databricks-connect configure
-  displayName: 'Configure DBConnect'
+- script: 
+    databricks configure --token dapi7a3667db53c6b6e2d947a54228ca01a2 --host https://adb-1307804220817493.13.azuredatabricks.net/
+  displayName: 'Configure DataBrick'
   
 - checkout: self
   persistCredentials: true
