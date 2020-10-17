@@ -19,13 +19,9 @@ steps:
     pip install pytest requests setuptools wheel
     pip install -U databricks-cli
   displayName: 'Load Python Dependencies'
-
-- script: 
-    databricks configure --token <<EOF
-    https://$(databricks_location).azuredatabricks.net
-    $(databricks-token)
-    EOF
-  displayName: 'Configure DataBrick'
+- task: Bash@3
+  inputs:
+    filePath: 'databricks configure --token <<EOF https://$(databricks_location).azuredatabricks.net $(databricks-token) EOF'
   
 - checkout: self
   persistCredentials: true
