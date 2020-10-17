@@ -28,6 +28,10 @@ steps:
       https://$(databricks_location).azuredatabricks.net
       $(databricks-token)
       EOF
+
+- script: |
+    dbfs ls
+  displayName: 'DBFS'
       
 - checkout: self
   persistCredentials: true
