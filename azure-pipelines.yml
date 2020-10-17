@@ -21,7 +21,7 @@ steps:
   displayName: 'Load Python Dependencies'
 
 - script: 
-    databricks configure --token dapi7a3667db53c6b6e2d947a54228ca01a2 --host https://adb-1307804220817493.13.azuredatabricks.net/
+    databricks configure --token 
   displayName: 'Configure DataBrick'
   
 - checkout: self
