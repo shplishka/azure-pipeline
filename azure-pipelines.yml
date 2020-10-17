@@ -41,13 +41,13 @@ steps:
 - script: git checkout main
   displayName: 'Get Latest Branch'
 
-- script: pwd
-          ls
-  displayName: 'get path'
+
 - script: git clone https://github.com/shplishka/azure-pipeline.git
-          ls
   displayName: 'clone'
   
+- script: ls
+  displayName: 'get path'
+
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
